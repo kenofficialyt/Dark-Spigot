@@ -1,0 +1,86 @@
+# Dark Spigot Optimized Global Configuration
+# Author: THT
+
+version: "1.0"
+
+settings:
+  # Enable timing information
+  timings:
+    enabled: true
+    verbose: true
+    server-name-privacy: false
+    hidden-config-entries:
+      - database
+      - plugins
+    history-interval: 300
+    history-length: 3600
+
+  # Network settings
+  network:
+    compression-threshold: 256
+    # Enable compression for faster transfers
+    enable-exception-reporting: false
+    # Disable for performance
+    use-alternate-floodgate-packet-handling: true
+
+  # Console settings
+  console:
+    enable-raw-messages: true
+    use-jline: true
+
+  # Player collisions
+  player-collisions:
+    enabled: false
+    # Disabled for better performance
+
+  # BungeeCord
+  bungee-online-mode: true
+
+  # Async chunk loading
+  async-chunks:
+    # Thread count for async chunk loading
+    threads: -1
+    # -1 = auto (CPU cores / 2)
+
+# Tick optimization
+ticks-per:
+  # Animal spawns - reduce for performance
+  animal-spawns: 400
+  # Monster spawns - reduce for performance
+  monster-spawns: 1
+  # Water ambient spawns
+  water-ambient-spawns: 400
+  # Water animal spawns
+  water-animal-spawns: 400
+
+# Entity optimization
+entity:
+  # Per-player mob spawning - reduces spawn lag
+  per-player-mob-spawns: true
+  # Faster despawning
+  tracking-range: 128
+  default-max-nearby-entities: 20
+  default-spawn-reason: natural
+
+# Chunk optimization
+chunks:
+  # Priority loading for players
+  enable-pre-jumbo-chunks: false
+  # Max chunk load rate per player
+  max-chunk-load-rate: 100.0
+  max-concurrent-chunk-loads: 4.0
+
+# Item optimization
+items:
+  # Disable custom payloads
+  allow-leashed-block-snap: false
+
+# Logging
+log:
+  admin-commands: true
+  # Async catcher for async operations
+  async-queue-conversion: true
+
+# Profiler
+profiler:
+  enable-flare-attachments: true
