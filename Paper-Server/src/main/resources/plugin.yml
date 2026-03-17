@@ -1,0 +1,24 @@
+name: DarkSpigot
+version: 1.0.0
+author: THT
+description: Optimized PaperMC fork with Tick, Network, AI, Chunk optimizations and Anti-Crash protection
+main: tht.darkspigot.DarkSpigot
+api-version: 1.21
+
+commands:
+  darktps:
+    description: View server TPS and performance metrics
+    usage: /<command>
+    permission: darkspigot.tps
+  darkspigot:
+    description: Dark Spigot main command
+    usage: /<command>
+    permission: darkspigot.admin
+
+permissions:
+  darkspigot.tps:
+    default: true
+  darkspigot.admin:
+    default: op
+  darkspigot.bypass.maxplayers:
+    default: op
