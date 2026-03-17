@@ -1,0 +1,207 @@
+# Dark Spigot Optimized World Configuration
+# Author: THT
+
+version: "1.0"
+
+# =========== TICK OPTIMIZATION ===========
+
+tick-rates:
+  # Chunk activation tick rates
+  chunks:
+    max-pending: -1
+  # Hopper optimization - reduce check frequency
+  hopper:
+    check-tick-interval: 8
+    disable-movement: true
+  # Container tick rates
+  container-update: 3
+  # Grass block tick rate
+  grass-spread-interval: 1
+
+# Entity activation ranges
+entity-activation-range:
+  # Ambient entities (particles, etc)
+  ambient: 16
+  # Aquatic entities
+  aquatic: 32
+  # Miscellaneous entities
+  misc: 16
+  # Monsters
+  monster: 48
+  # Flying mobs
+  flying: 48
+  # Water mobs
+  water: 32
+  # Villagers
+  villager: 32
+  # Pets
+  pets: 32
+  # Animals
+  animal: 32
+  # Raid heroes
+  raid: 64
+
+# ========== ANTI-CRASH PROTECTION ==========
+anti-crash:
+  # Entity crash protection
+  entity:
+    # Max entities per chunk
+    max-per-chunk: 150
+    # Validate entity IDs
+    validate-ids: true
+    # Remove invalid entities
+    remove-invalid: true
+  # Chunk overload protection
+  chunk:
+    # Max tile entities per chunk
+    max-tile-per-chunk: 200
+    # Validate chunks
+    validate: true
+  # Packet validation
+  packet:
+    # Max packet size
+    max-size: 2097152
+    # Validate packets
+    validate: true
+
+# ========== AI OPTIMIZATION ==========
+ai:
+  # Villager lobotomization - removes AI from idle villagers
+  villager-lobotomize: true
+  # Villager tick interval (higher = less CPU)
+  villager-tick-interval: 20
+  # Mob AI tick range
+  mob-ai-tick-range: 48
+  # Simplify distant pathfinding
+  simplify-distant-pathfinding: true
+  # Pathfinding update interval
+  pathfinding-update-interval: 10
+  # Disable useless mob AI
+  optimize-movement: true
+  # Reduce pathfinding precision for distant mobs
+  reduce-precision: true
+
+# ========== CHUNK LOADING ==========
+chunks:
+  # Async chunk loading
+  async-loading: true
+  # Max concurrent chunk loads
+  max-concurrent-chunk-loads: 4
+  # Player chunk load rate
+  player-chunk-load-rate: 100.0
+  # Chunk GC period in ticks
+  gc-period: 400
+  # Priority chunk load distance
+  priority-distance: 2
+  # Prevent moving into unloaded chunks
+  prevent-moving-into-unloaded: true
+  # Smooth chunk loading
+  smooth-loading: true
+  # Preload chunks
+  preload: false
+
+# ========== REDSTONE OPTIMIZATION ==========
+redstone:
+  # Use alternate current redstone (much faster)
+  implementation: ALTERNATE_CURRENT
+  # Faster redstone tick
+  use-faster-eigencraft-redstone: true
+
+# ========== NETTORK ==========
+network:
+  # Compression threshold
+  compression-threshold: 256
+  # Batch chunk packets
+  batch-chunks: true
+  # Max batch size
+  max-batch-size: 16
+
+# ========== SPAWNING ==========
+spawn-limits:
+  monsters: 50
+  animals: 8
+  water-animals: 7
+  water-ambient: 10
+  ambient: 1
+
+# =========< DESPAWNING ==========
+despawn-ranges:
+  soft: 128
+  hard: 192
+
+# ========== SAVE OTTIMIVATION ==========
+save:
+  # Disable auto save completely (use plugin)
+  enabled: false
+  # Max chunks per tick to save
+  max-auto-save-chunks-per-tick: 8
+  # Interval between saves (ticks)
+  interval: 6000
+
+# ========== VILLAGER OPTIMIZATION ==========
+villager:
+  # Disable valid check sounds
+  valid-check-sound: false
+  # Lobotomize villagers far from their goal
+  lobotomize: true
+  # Refresh career
+  refresh-career: true
+
+# ========== MISC OPTIMIZATIONS ==========
+game-mechanics:
+  # Disable missing cucumber sound
+  cucumber-strider-sound: false
+  # Disable piglin-bridge-conversion
+  disable-piglin-bridge-conversion: true
+  # Disable unoptimized mob spawner spawning
+  optimize-spawner-nerfed-mobs: true
+  # Faster mob spawner ticks
+  spawner-nerfed-mobs-is-moving: true
+
+# ========== VIEW DISTANCE ==========
+view-distance: 10
+simulation-distance: 8
+
+# ========== TICKET MANAGER ==========
+chunk-tick:
+  # Max chunks to tick per tick
+  max-chunks: 100
+  # Tick entities
+  tick-entities: true
+  # Tick block entities
+  tick-block-entities: true
+
+# ========== LIGHT OPTIMIZATION ==========
+lighting:
+  # Optimized light engine
+  optimize: true
+  # Async light updates
+  async: true
+
+# ========== ENTITY PER PACKET ==========
+entity-per-chunk-save-limit:
+  armor_stand: 0
+  arrow: 0
+  boat: 0
+  egg: 0
+  ender_pearl: 0
+  experience_orb: 0
+  fireball: 0
+  fireworks_rocket: 0
+  item: 0
+  item_frame: 0
+  leash_misc: 0
+  lightning_bolt: 0
+  llama_spit: 0
+  minecart: 0
+  painting: 0
+  player: 0
+  shulker_bullet: 0
+  small_fireball: 0
+  snowball: 0
+  spectral_arrow: 0
+  splash_potion: 0
+ tnt: 0
+  tnt_minecart: 0
+  trident: 0
+  falling_block: 0
