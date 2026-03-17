@@ -1,0 +1,38 @@
+# Dark Spigot Configuration
+# Author: THT
+# Version: 1.0.0
+
+anti-crash:
+  enabled: true
+  max-entity-id: 2147483647
+  chunk-overload-protection: true
+  max-entities-per-chunk: 150
+  max-tile-entities-per-chunk: 200
+
+tick-optimizer:
+  entity-activation-range: 32
+  animal-activation-range: 32
+  monster-activation-range: 48
+  misc-activation-range: 16
+
+network:
+  compression-enabled: true
+  compression-threshold: 256
+  batching-enabled: true
+  max-batch-size: 50
+  packet-spam-check: true
+
+ai:
+  villager-lobotomize: true
+  villager-tick-interval: 20
+  mob-ai-tick-range: 48
+  simplify-distant-pathfinding: true
+  pathfinding-update-interval: 10
+
+chunk:
+  player-chunk-load-rate: 100.0
+  max-concurrent-chunk-loads: 4
+  gc-period: 400
+  async-loading: true
+  priority-distance: 2
+  prevent-moving-into-unloaded: true
